@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rutuja-Front End Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(1, 1, 33);
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(16, 16, 70);
+        height: 80px;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: rgb(163, 163, 228);
+        font-size: 1.02rem;
+      }
+      .left {
+        font-size: 1.8rem;
+      }
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 90px;
+      }
+      .firstSection > div {
+        width: 46%;
+      }
+      .leftSection {
+        font-size: 3rem;
+        align-items: center;
+        /* margin: 70px; */
+      }
+      .rightSection img {
+        width: 100%;
+        height: 400px;
+      }
+      .purple {
+        color: purple;
+      }
+      #element {
+        color: purple;
+      }
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+      }
+      main hr {
+        border: 0;
+        background: rgb(83, 83, 206);
+        height: 1.2px;
+        margin: 60px 84px;
+      }
+      .text-gray {
+        color: gray;
+      }
+      .secondSection h2 {
+        font-size: 1.9rem;
+      }
+      .secondSection .box {
+        background: gray;
+        width: 80vw;
+        height: 2px;
+        margin: 26px 0;
+        display: flex;
+      }
+      .verticle {
+        height: 420px;
+        width: 1px;
+        background-color: white;
+        margin: 0 60px;
+        /* display: flex; */
+      }
+      .horizontal {
+        background: gray;
+        width: 4vw;
+        height: 2px;
+        margin-top: 66px;
+        margin-bottom: 30px;
+        display: flex;
+      }
+      .horizontal-2 {
+        background: gray;
+        width: 4vw;
+        height: 2px;
+        margin-top: 200px;
+        margin-bottom: 30px;
+        display: flex;
+      }
+      .developer-img {
+        width: 53px;
+        height: 50px;
+        position: relative;
+        top: -40px;
+        left: -60px;
+      }
+      .horizontal-title {
+        position: relative;
+        top: -65px;
+        left: 80px;
+        width: 40vw;
+        height: 2px;
+        font-size: 20px;
+      }
+      .disc {
+        position: relative;
+        top: 5px;
+        left: 20px;
+        width: 70vw;
+        height: 2px;
+      }
+      .disc2 {
+        position: relative;
+        top: 5px;
+        left: 20px;
+        width: 70vw;
+        height: 2px;
+      }
+      .disc ul li {
+        font-size: 15px;
+      }
+
+      .thirdSection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+      }
+      .thirdSection .box {
+        background: gray;
+        width: 70vw;
+        height: 2px;
+        margin: 46px 0;
+        display: flex;
+      }
+      .verticle1 {
+        height: 60px;
+        width: 1px;
+        background-color: white;
+        margin: 0 130px;
+      }
+      .college-logo {
+        width: 40px;
+        position: relative;
+        top: -45px;
+        left: -20px;
+      }
+      .verticle-title {
+        position: relative;
+        top: 35px;
+        width: 150px;
+        left: -30px;
+      }
+      .verticle-disc {
+        position: relative;
+        top: 45px;
+        color: gray;
+        width: 150px;
+        font-size: 14px;
+        left: -30px;
+      }
+      .verticle-disc1 {
+        position: relative;
+        top: 50px;
+        color: gainsboro;
+        width: 150px;
+        font-size: 14px;
+        left: -30px;
+      }
+      .percentage {
+        font-size: 12px;
+        color: purple;
+        position: relative;
+        top: 55px;
+        width: 150px;
+        left: -30px;
+      }
+      .skills {
+        padding-top: 20px;
+        max-width: 80vw;
+        margin: auto;
+        height: 90vh;
+      }
+      .header {
+        text-align: center;
+        color: #fff;
+        padding: 1rem;
+        position: relative;
+      }
+      .header:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 4px;
+        width: 100px;
+        background: color #2ecc71;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-gap: 1rem;
+        padding: 1rem 80px;
+        font-size: 1.2rem;
+      }
+      .skill-box {
+        padding: 1rem;
+        color: #ddd;
+        cursor: pointer;
+      }
+      .skill-box:hover > .skill-title::after,
+      .skill-box:hover > .skill-title::before {
+        width: 35px;
+      }
+      .skill-box:hover .img {
+        transform: translateY(-10px);
+      }
+      .skill-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+      }
+      .skill-title:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        width: 0;
+        height: 4px;
+        border-radius: 2px 0 0 2px;
+        background-color: #2ecc71;
+        transition: 0.5s;
+      }
+      .skill-title:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 4px;
+        border-radius: 0 2px 2px 0;
+        background-color: #2ecc71;
+        transition: 0.5s;
+      }
+      .img {
+        width: 90px;
+        height: 90px;
+        position: relative;
+        border-radius: 45px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+      }
+      .img:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 90px;
+        background: rgba(100, 100, 100, 0.5);
+        border-radius: 45px 0 0 45px;
+      }
+      .skill-title h3 {
+        color: #fff;
+        margin-top: 0.5rem;
+      }
+      .skill-icon {
+        width: 50px;
+        z-index: 2;
+      }
+      .skill-description{
+        font-size: 12px;
+      }
+      footer {
+        background-color: rgb(26, 26, 51);
+        height: 150px;
+      }
+      .footer {
+        display: flex;
+        padding: 13px 130px;
+        justify-content: space-around;
+      }
+      .footer > div {
+        width: 400px;
+        margin: 0 auto;
+      }
+      .footer ul {
+        list-style: none;
+      }
+      .footer ul > li > a {
+        color: gray;
+      }
+      footer .footer-rights {
+        text-align: center;
+        color: gray;
+        margin-bottom: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Rutuja's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#section2">Work Experience</a></li>
+            <li><a href="#section3">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#section5">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstSection" id="section1">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Rutuja</span>
+          <div>and I am a Passionate</div>
+          <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="photos/web-developer1.png" alt="web-developer" />
+        </div>
+      </section>
+      <hr />
+      <section class="skills" id="skills">
+        <div class="header">
+          <h1>My Skills</h1>
+        </div>
+        <div class="container">
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="img">
+                <img src="photos/html.png" class="skill-icon" />
+              </div>
+              <h3>HTML5</h3>
+            </div>
+            <p class="skill-description">
+              Proficient in creating structured, semantic markup for web pages.
+            </p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="img">
+                <img src="photos/css3.png" class="skill-icon" />
+              </div>
+              <h3>CSS3</h3>
+            </div>
+            <p class="skill-description">
+              Skilled in styling web pages with CSS to enhance visual
+              presentation and user experience.
+            </p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="img">
+                <img src="photos/js.png" class="skill-icon" />
+              </div>
+              <h3>JavaScript</h3>
+            </div>
+            <p class="skill-description">
+              Experienced in using JavaScript, event handling, DOM manipulation,
+              and asynchronous programming techniques.
+            </p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="img">
+                <img src="photos/react.png" class="skill-icon" />
+              </div>
+              <h3>React</h3>
+            </div>
+            <p class="skill-description">
+              Proficient in building user interfaces and single-page
+              applications (SPAs) with React, utilizing component-based
+              architecture, state management.
+            </p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="img">
+                <img src="photos/node.png" class="skill-icon" />
+              </div>
+              <h3>Node</h3>
+            </div>
+            <p class="skill-description">
+              Skilled in server-side JavaScript development with Node.js,
+              including building RESTful APIs.
+            </p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="img">
+                <img src="photos/python.png" class="skill-icon" />
+              </div>
+              <h3>Python</h3>
+            </div>
+            <p class="skill-description">
+              Proficient in Python programming language, known for its
+              simplicity, versatility, and readability.
+            </p>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="section2" class="secondSection">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Work Experiences</h1>
+        <div class="box">
+          <div class="verticle">
+            <div class="horizontal">
+              <img class="developer-img" src="photos/developer.webp" alt="developer" />
+            </div>
+            <div class="horizontal-title">
+              Software Developer (Aug 2022-Jan 2024)
+              <div class="disc">
+                <ul>
+                  <li>
+                    Developed Single Page Applications (SPAs) in collaboration
+                    with frontend teams, demonstrating proficiency in SPA
+                    architecture.
+                  </li>
+                  <li>
+                    Implemented Redux state management to enhance the
+                    scalability and maintainability of React applications Built
+                    reusable UI components using React Hooks that can be used
+                    across multiple projects with React.
+                  </li>
+                  <li>
+                    Optimized performance of existing React applications by
+                    utilizing best practices such as code splitting, lazy
+                    loading. Implemented robust routing for SPAs using libraries
+                    like react-router-dom.
+                  </li>
+                  <li>
+                    Collaborated with cross-functional teams, including
+                    designers and backend developers, to deliver high-quality
+                    software solutions.
+                  </li>
+                  <li>
+                    Monitored browser compatibility issues while coding layouts
+                    using HTML5, CSS3, JavaScript and jQuery along with other
+                    frameworks like Bootstrap or Material UI when creating react
+                    apps
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="horizontal-2">
+              <img class="developer-img" src="photos/developer.webp" alt="developer" />
+            </div>
+            <div class="horizontal-title">
+              Intern (Feb 2022- June-2022)
+              <div class="disc">
+                <ul>
+                  <li>
+                    Developed Python solutions for a novel glucose meter case
+                    study
+                  </li>
+                  <li>
+                    mplemented algorithms for analyzing non-invasive glucose
+                    readings
+                  </li>
+                  <li>
+                    Collaborated with a multidisciplinary team on integrating
+                    machine learning models
+                  </li>
+                  <li>
+                    Contributed to the development of a user-friendly interface
+                    for data visualization Gained valuable insights into the
+                    intersection of technology and healthcare innovation
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="thirdSection" id="section3">
+        <span class="text-gray">Where I have studied</span>
+        <h1>Education</h1>
+        <div class="box">
+          <div class="verticle1">
+            <img class="college-logo" src="photos/coep1.png" alt="developer" />
+            <div class="verticle-title">M.Tech (Jan 2021- Sept 2022)</div>
+            <div class="verticle-disc">College Of Engineering, Pune</div>
+            <div class="verticle-disc1"><i>Digital Systems</i></div>
+            <div class="percentage"><i>CGPA: 7.9</i></div>
+          </div>
+
+          <div class="verticle1">
+            <img class="college-logo" src="photos/clge3.png" alt="developer" />
+            <div class="verticle-title">B.E (June 2015- Sept 2019)</div>
+            <div class="verticle-disc">BAMU, Aurangabad</div>
+            <div class="verticle-disc1">
+              <i>Electronics and Telecommunications</i>
+            </div>
+            <div class="percentage"><i>Percentage: 74%</i></div>
+          </div>
+          <div class="verticle1">
+            <img class="college-logo" src="photos/school.webp" alt="developer" />
+            <div class="verticle-title">HSC (March 2015)</div>
+            <div class="verticle-disc">State Board of Maharashtra</div>
+            <div class="percentage"><i>Percentage: 79%</i></div>
+          </div>
+          <div class="verticle1">
+            <img class="college-logo" src="photos/school.webp" alt="developer" />
+            <div class="verticle-title">SSC (March 2013)</div>
+            <div class="verticle-disc">State Board of Maharashtra</div>
+            <div class="percentage"><i>Percentage: 85%</i></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="section5">
+      <div class="footer">
+        <div class="footer-first">
+          Rutuja's Developer portfolio
+          <div><b>Email : rutujamane479@gmail.com</b></div>
+          <div><b>Mobile: 9067094401</b></div>
+        </div>
+        <div class="footer-first">
+          <ul>
+            <li>LinkedIn</li>
+            <li>Github</li>
+            <li>Instagram</li>
+          </ul>
+        </div>
+        <div class="footer-first">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/rutuja-mane-coep/"
+                >https://www.linkedin.com/in/rutuja-mane-coep/</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/dashboard"
+                >https://github.com/dashboard</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/"
+                >https://www.instagram.com/</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rights">
+        www.rutujasportfolio.com | All rights reserved
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "React JS Developer."],
+        typeSpeed: 50,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
